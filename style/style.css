@@ -61,12 +61,25 @@ p {
     color: hsl(277, 64%, 61%);
 }
 
-.img {
-    width: 100%;
-    height: 100%;
+img {
+    position: relative;
     border-radius: 3px;
     margin: 0;
     padding: 0;
+    opacity: 0.6;
+    height: 100%;
+}
+
+img::after {
+    content: '';
+    background-color: hsl(277, 64%, 61%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 body .container {
@@ -86,11 +99,6 @@ header .container {
     padding: 2em;
 }
 
-#secondary-col {
-    width: 50%;
-    padding: 0;
-    margin: 0;
-}
 
 #stats {
     display: flex;
